@@ -1,0 +1,226 @@
+
+/*Common Setting*/
+
+* {
+    padding : 0;
+    margin : 0;
+    border : 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+/*Container*/
+.container {
+    height : 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width : 340px;
+}
+/*END. Container*/
+
+/*navbar*/
+.navbar {
+    width : 100%;
+    position : absolute;
+    top : 0;
+    padding : 12px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.toolbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbox a {
+    display: inline-block;
+    padding: 0 15px;
+    color : black;
+    font-size: 20px;
+}
+
+.toolbox .profile_image {
+    padding : 6px;
+    padding-left: 15px;
+}
+
+.toolbox .navbar_menu {
+    padding : 12px;
+}
+
+.toolbox .profile_image img {
+    width : 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.toolbox a:hover {
+    text-decoration: underline;
+}
+
+.toolbox .navbar_menu:hover {
+    background-color: grey;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+/*여기서 메뉴에 hover 했을 때, 버튼 위로 올라오게 하는 거*/
+/*END. navbar*/
+
+/*main*/
+
+.main img {
+    margin : 0 auto;
+    z-index: -1;
+}
+
+/*END. main*/
+
+/*Search box*/ 
+.search_box_area {
+    margin : 0 auto;
+    max-width: 584px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_box {
+    max-width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border : 1px solid black;
+    border-radius: 24px;
+    padding : 20px 4px;
+}
+
+.search_box input {
+    min-width: 300px;
+    height : 40px;
+    outline : none;
+}
+
+.search_box i {
+    padding : 0 12px;
+}
+
+/*dropdown menu*/
+.wrapper {
+    border : 1px solid black;
+    border-radius: 10px;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown .searchname {
+    padding : 8px 16px;
+}
+
+.dropdown .searchname:hover {
+    background-color: lightgrey;
+}
+
+.dropdown .searchname i,a {
+    color :black;
+    cursor: default;
+}
+
+/*END. dropdown menu*/
+
+/*END. Search box*/ 
+
+/* Button list */
+.button_list {
+    margin : 20px 0;
+}
+
+.button_list button {
+    margin : 12px 4px;
+    padding : 0 16px;
+    font-size: 14px;
+    line-height: 28px;
+    height : 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_list button:hover {
+    box-shadow: 0 1px 1px black;
+    border : 1px solid grey;
+}
+
+
+/* END. Button list */
+
+/* Introduction */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.introduction div {
+    padding-bottom: 30px;
+}
+
+/* END. Introduction */
+
+/* Service */
+.service {
+    width : 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: lightgrey;
+}
+
+.service .country {
+    padding : 20px;
+    border-bottom : 1px solid #dadce0;
+}
+
+.service footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap : wrap;
+    padding : 20px;
+}
+
+.service footer .footer_left{
+    display: flex;
+}
+
+.service footer .footer_right{
+    display: flex;
+}
+
+.service footer div a {
+    padding : 10px;
+    color : black;
+}
+
+.service footer div a:hover {
+    text-decoration: underline;
+}
+
+
+/* END. Service */
+
+/*Media query*/
+
+@media screen and (max-width: 1200px) {
+    .service footer {
+        justify-content: space-evenly;
+    }
+}
