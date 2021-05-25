@@ -27,6 +27,7 @@ html {
     align-items: center;
 }
 
+
 /* END. Common styles */
 
 /* Section-1 */
@@ -187,7 +188,7 @@ html {
 }
 
 .section-1-banner h1 {
-    font-size : 13rem;
+    font-size : 8rem;
     font-weight : 300;
     text-transform : uppercase;
     letter-spacing: 0.5rem;
@@ -368,21 +369,114 @@ html {
     position : relative;
 }
 
+/* watches */
 .watches {
     position: relative;
     width : 100%;
     height: 100%;;
     overflow : hidden;
+
 }
 
 .watch-bands {
     position: absolute;
+    margin-left : 48rem;
 }
 
 .watch-cases {
     flex-direction: column;
     position: absolute;
+    margin-top : 48rem;
 }
 
+/* END. watches */
+
+/* watch controls */
+.watch-control {
+    position : absolute;
+    width : 6rem;
+    height: 6rem;
+    font-size: 5rem;
+    background-color: rgba(221, 221, 221, 0.4);
+    border-radius: 50%;
+    color : var(--primary-color);
+    line-height: 5rem;
+}
+
+.watch-control-top {
+    position : absolute;
+    top : 20vh;
+    left : 50%;
+    transform: translateX(-50%);
+}
+
+.watch-control-left {
+    position : absolute;
+    top : 50%;
+    left : 0;
+    transform: translateY(-50%);
+}
+.watch-control-right {
+    position : absolute;
+    top : 50%;
+    right : 0;
+    transform: translateY(-50%);
+}
+.watch-control-bottom {
+    position : absolute;
+    bottom : 20vh;
+    left : 50%;
+    transform : translateX(-50%);
+}
+/* END. watch controls */
 
 /* END. Section-4 */
+
+/* Section-5 */
+#section-5 {
+    width : 100%;
+    height : 100vh;
+    position: relative;
+}
+
+.airpods {
+    position: relative;
+}
+
+.section-5-heading {
+    color : var(--white-color);
+    position: absolute;
+    top : 0;
+    left : 50%;
+    transform : translateX(-50%);
+    font-size : 8rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+}
+
+#section-5 img {
+    width : 49%;
+    object-fit: contain;
+}
+
+.airpods-img-2 {
+    background-color: var(--primary-color);
+}
+
+.airpods-buttons {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+.airpods-buttons .airpods-btn {
+    padding : 1rem 2rem;
+    margin : 0 1rem;
+    border-radius: 1rem;
+    width : 15rem;
+    height : 4rem;
+    font-size : 2rem;
+}
+
+/* END. Section-5 */
