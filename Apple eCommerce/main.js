@@ -98,6 +98,24 @@ slideshowActive();
 
 // END. SlideShow
 
+// Section-3
+
+const section3Content = document.querySelector('.section-3-content');
+
+window.addEventListener('scroll',(e)=>{
+    /*
+    console.log(`scrollY:${window.scrollY}, innerheight:${window.innerHeight}`)
+    console.log(``)
+    */
+    console.log(section3Content.getBoundingClientRect());
+    
+    if(section3Content.getBoundingClientRect().top <= 1400){
+        section3Content.classList.add('change');
+    }    
+})
+
+// END. Section-3
+
 // Section-4
 
 
