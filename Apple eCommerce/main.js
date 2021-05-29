@@ -107,7 +107,7 @@ window.addEventListener('scroll',(e)=>{
     console.log(`scrollY:${window.scrollY}, innerheight:${window.innerHeight}`)
     console.log(``)
     */
-    console.log(section3Content.getBoundingClientRect());
+    //console.log(section3Content.getBoundingClientRect());
     
     if(section3Content.getBoundingClientRect().top <= 1400){
         section3Content.classList.add('change');
@@ -117,6 +117,61 @@ window.addEventListener('scroll',(e)=>{
 // END. Section-3
 
 // Section-4
+const watchBands = document.querySelector('.watch-bands');
+const watchCases = document.querySelector('.watch-cases');
+
+const watchControlTop = document.querySelector('.watch-control-top');
+const watchControlRight = document.querySelector('.watch-control-right');
+const watchControlBottom = document.querySelector('.watch-control-bottom');
+const watchControlLeft = document.querySelector('.watch-control-left');
+
+let axisX = 48;
+let axisY = 48;
+
+const hideControl = () => {
+    if(axisY === -432){
+        watchControlTop.style.display = "none";
+    } else {
+        watchControlTop.style.display = "block";
+    }
+    if(axisY === 432){
+        watchControlBottom.style.display = "none";
+    } else {
+        watchControlBottom.style.display = "block";
+    }
+    if(axisX === 432){
+        watchControlLeft.style.display = "none";
+    } else {
+        watchControlLeft.style.display = "block";
+    }
+    if(axisX === -432){
+        watchControlRight.style.display = "none";
+    } else {
+        watchControlRight.style.display = "block";
+    }
+} 
+/*함수로 밖에 빼주어야 제대로 작동*/
+hideControl();
+
+watchControlTop.addEventListener('click',()=>{
+    watchCases.style.marginTop = `${axisY -= 96}rem`;
+    hideControl();
+})
+
+watchControlBottom.addEventListener('click',()=>{
+    watchCases.style.marginTop = `${axisY += 96}rem`;
+    hideControl();
+})
+
+watchControlLeft.addEventListener('click',()=>{
+    watchBands.style.marginLeft = `${axisX += 96}rem`;
+    hideControl();
+})
+
+watchControlRight.addEventListener('click',()=>{
+    watchBands.style.marginLeft = `${axisX -= 96}rem`;
+    hideControl();
+})
 
 
 

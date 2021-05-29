@@ -481,12 +481,14 @@ html {
 .watch-bands {
     position: absolute;
     margin-left : 48rem;
+    transition: margin-left 1s;
 }
 
 .watch-cases {
     flex-direction: column;
     position: absolute;
     margin-top : 48rem;
+    transition: margin-top 1s;
 }
 
 /* END. watches */
