@@ -56,13 +56,53 @@
     letter-spacing: 0.2vh;
 }
 
+/*dropdown*/
 .header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-button {
     color : black;
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size : 2rem;
     line-height: 5rem;
     padding : 0 0.5rem;
 }
 
+.dropdown .dropdown-content {
+    width : 10rem;
+    position: absolute;
+    top : 0;
+    right : 0;
+    transform: translate(0, 5rem);
+    display: none;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    padding : 0.5rem 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color : black;
+    font-size: 1.5rem;
+    display: block;
+    text-align: left;
+    padding : 0.5rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #e9ecef;
+}
+
+.dropdown-content.show {
+    display : block;
+}
+
+/*END. dropdown*/
 /* END. Header */
 
 /* Navigation */
