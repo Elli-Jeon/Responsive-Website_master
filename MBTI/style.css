@@ -1,0 +1,68 @@
+/*Common*/
+
+:root {
+    --primary-color : #809fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 60vh;
+    width: 60vh;
+    flex-direction: column;
+    position: relative;
+    margin : auto;
+}
+
+
+
+/*END. Common*/
+
+/* Header */
+
+.header {
+    position: absolute;
+    top : 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size : 3rem;
+    color : black;
+    background-color: var(--primary-color);
+}
+
+.header .logo {
+    background-color: black;
+    padding : 0 0.5rem;
+    color : white;
+    line-height: 4rem;
+}
+
+.header span {
+    color : white;
+    font-weight: 600;
+    font-size : 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.2vh;
+}
+
+.header .dropdown {
+    color : black;
+    font-size : 2rem;
+    line-height: 4rem;
+    padding : 0 0.5rem;
+}
+
+/* END. Header */
