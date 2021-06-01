@@ -104,7 +104,7 @@
 }
 /* END. Empty space */
 
-/* Main-content */
+/* Main-content : start */
 
 .main-content {
     display: flex;
@@ -181,4 +181,34 @@
     background-color: var(--dark-complementary-color);
     border: 0.5px solid black;
 }
-/* END. Main-content */
+/* END. Main-content : start */
+
+/* Main-content : question*/
+.progress-bar {
+    width : 100%;
+    height : 1.5rem;
+    position: relative;
+    border-radius: 1rem;
+    background-color: #e9ecef;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width : 30%;
+    height: 1.5rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.progress-count {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.question-container {
+    font-size : 2.5rem;
+}
+
+/* END. Main-content : question*/
