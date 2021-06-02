@@ -221,6 +221,13 @@
     background-color: var(--dark-complementary-color);
     border: 0.5px solid black;
 }
+
+.main-content button:disabled {
+    background-color: beige;
+    border: none;
+    cursor: default;
+}
+
 /* END. Main-content : start */
 
 /* Main-content : question*/
@@ -248,7 +255,25 @@
 }
 
 .question-container {
-    font-size : 2.5rem;
+    font-size : 1.8rem;
+    margin: 1rem 0;
+}
+
+.empty-line {
+    background-color: #DBDBDB;
+    width : 100%;
+    height : 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.answer-container ol {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-container ol li{
+    font-size : 2rem;
+    display: block;
 }
 
 /* END. Main-content : question*/

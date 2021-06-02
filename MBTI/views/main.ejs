@@ -27,8 +27,13 @@
         <!-- END. empty space -->
         <!-- Main-Content -->
         <section class="main-content">
-            <%- include('./part/start.ejs');%> 
-            <!-- include('./part/question.ejs'); -->
+            
+            <% if(1 > 0){ %>
+                <%- include('./part/start.ejs');%> 
+            <% } else{ %>  
+                <%- include('./part/question.ejs'); %>
+            <% } %>
+            
         </section>
         <!-- END.Main-Content -->
     </div>
