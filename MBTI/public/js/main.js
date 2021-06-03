@@ -54,7 +54,7 @@ const getFile = async () => {
 
 const sendData = async () => {
     let jsonData = await getFile(); // 밖에서 동기적으로 데이터 빼내가지 말고 여기서 비동기적으로 작업 끝내기
-    console.log(jsonData);
+    console.log(jsonData); // 여기서 작업
 } // send data to ejs
 
 sendData();

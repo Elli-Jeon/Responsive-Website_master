@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require("path");
+const fs = require('fs');
 
 const app = express();
 
@@ -9,14 +10,16 @@ app.set('view engine','ejs');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
+
 app.get("/", (req, res)=>{
-    // res.sendFile(path.join(__dirname,"/views/index.html")); 
-    let context = {
-        title : 'Check your MBTI',
-        whichPage : 'main', 
-        // main : mainpage, Q : question page
-    }
-    res.render("main.ejs", context); 
+    res.render("main.ejs"); 
+})
+
+app.get("/question",(req,res)=>{
+    fs.readFile("./public/data/data.json","utf-8",(err, data)=>{
+        let jsonData = JSON.parse(data);
+        res.render("question.ejs", {jsonData});
+    }) //https://kingle1024.tistory.com/185
 })
 
 app.listen("8000", ()=>{

@@ -27,7 +27,8 @@
         <!-- END. empty space -->
         <!-- Main-Content -->
         <section class="main-content">
-            <%- include('./part/start.ejs');%> 
+            <%= jsonData.questionList[0].q %>
+            <%- include('./part/QandA.ejs'); %>           
         </section>
         <!-- END.Main-Content -->
     </div>
