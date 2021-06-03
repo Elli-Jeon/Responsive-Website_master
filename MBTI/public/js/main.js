@@ -37,26 +37,3 @@ nameInput.addEventListener('change',()=>{
 // 안에 내용에 따라 button disabled toggle되는거 하고 싶은뎅
 
 /* END. main-content button*/
-
-/* Fetch api*/
-
-const getFile = async () => {
-    const response = await fetch("../data/data.json");
-    //console.log(response);
-    if(response.ok){ // true
-        const data = await response.json();
-        //console.log(data);
-        return data;
-    } else {
-        throw Error("No File!");
-    }
-} // fetch data
-
-const sendData = async () => {
-    let jsonData = await getFile(); // 밖에서 동기적으로 데이터 빼내가지 말고 여기서 비동기적으로 작업 끝내기
-    console.log(jsonData); // 여기서 작업
-} // send data to ejs
-
-sendData();
-
-/* END. Fetch api*/

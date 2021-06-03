@@ -15,11 +15,18 @@ app.get("/", (req, res)=>{
     res.render("main.ejs"); 
 })
 
+/*
 app.get("/question",(req,res)=>{
     fs.readFile("./public/data/data.json","utf-8",(err, data)=>{
         let jsonData = JSON.parse(data);
         res.render("question.ejs", {jsonData});
     }) //https://kingle1024.tistory.com/185
+})
+*/ // 이렇게 서버 쪽에서 readFile로 ejs에 같이 미들웨어 처럼 달아보내주면 ejs에서 사용이 가능. 변수처럼. <%=%>으로
+// 하지만 클라 사이드에서 js로 처리해주고 싶으니깐, fetch를 사용할 것.
+
+app.get("/question",(req,res)=>{
+    res.render("question.ejs");
 })
 
 app.listen("8000", ()=>{

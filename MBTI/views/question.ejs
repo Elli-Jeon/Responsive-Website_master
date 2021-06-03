@@ -7,7 +7,7 @@
     <title> MBTI </title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="module" src="/js/main.js"></script> 
+    <script type="module" src="/js/question.js"></script> 
     <!--script type="module" 적어주어야 정상적으로 나눈 상태에서 작동-->
 </head>
 <body>
@@ -27,7 +27,6 @@
         <!-- END. empty space -->
         <!-- Main-Content -->
         <section class="main-content">
-            <%= jsonData.questionList[0].q %>
             <%- include('./part/QandA.ejs'); %>           
         </section>
         <!-- END.Main-Content -->
