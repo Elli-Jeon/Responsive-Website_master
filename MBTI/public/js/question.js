@@ -41,32 +41,27 @@ const makeQuestion = (data, idxNum, answer) => {
     const questionContainer = document.querySelector(".question-container");
 
     questionContainer.innerText = data.questionList[idxNum].q;
-    addNumber(data, idxNum, answer);
-}
 
-const addNumber = (data, idxNum, answer) => {
     const answerContainer = document.querySelector(".answer-container");
-    const yesButton = document.createElement('button');
-    const noButton = document.createElement('button');
+    
+    let button;
+    for(let i = 0; i < 2; i++){
+        button = document.createElement('button');
+        button.innerText = data.questionList[idxNum].a[i].answer;
+        answerContainer.appendChild(button);
+        button.classList.add("answer-button");
+        button.addEventListener('click', ()=>{
+            let type = data.questionList[idxNum].a[0].type;
+            answer[type]++;
+        
+            document.querySelectorAll(".answer-button").forEach((btn)=>btn.remove()); // 쓴거는 바로 지워줌.
+            makeQuestion(data, ++idxNum, answer);    
+        }) // 버튼 두개에 둘 다 listener 달아주기 위함.
+    }
+    return answer
+}    
 
-    yesButton.innerText = data.questionList[idxNum].a[0].answer;
-    noButton.innerText = data.questionList[idxNum].a[1].answer;
 
-    answerContainer.appendChild(yesButton);
-    answerContainer.appendChild(noButton);
-
-    yesButton.addEventListener('click',()=>{
-        let type = data.questionList[idxNum].a[0].type;
-        answer[type]++;
-        answerContainer.removeChild(yesButton); // 여기에 계속 추가되니깐 삭제해주어야.
-        answerContainer.removeChild(noButton);
-        if(idxNum === 5) {
-            console.log(answer);
-        }
-        makeQuestion(data, ++idxNum, answer);
-        // console.log(answer);
-    });
-}
 
 const getData = async () => {
     let response = await fetch("../data/data.json");
@@ -83,10 +78,19 @@ const getData = async () => {
         J : 0,
         P : 0,
     };
-    let idxNum = 0;
-    makeQuestion(data, idxNum, answer);
+    let idxNum = 0; 
     
+
+    makeQuestion(data, idxNum, answer);
+;
+
+
     console.log(answer);
+    
+
+
+    
+    //console.log(answer);
 
  
 
