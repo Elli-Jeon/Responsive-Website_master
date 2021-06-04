@@ -29,7 +29,7 @@ app.get("/question",(req,res)=>{
 app.get("/question",(req,res)=>{
     console.log(req.query);
     let id = req.query.id;
-    res.render("question.ejs", id);
+    res.render("question.ejs", {id});
 })
 // 원래는 .post로 하고, req.body로 해줘야하나, req.query써보고 싶어서 get으로 진행.
 
