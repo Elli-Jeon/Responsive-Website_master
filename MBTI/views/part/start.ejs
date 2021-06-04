@@ -1,7 +1,9 @@
 <h1>MBTI 무료 성격유형 테스트</h1>
 <h3>80개의 질문으로 나의 MBTI 유형을 알아보세요.</h3>
-<div class="name-box">
-    <div class="name-button">이름</div>
-    <input type="text" class="name-input" placeholder="이름을 입력하세요.">
-</div>
-<button class="start-button" type="button" disabled>바로 시작하기</button>
+<form action="/question" method="">
+    <div class="name-box">
+        <div class="name-button">이름</div>
+        <input name="id" type="text" class="name-input" placeholder="이름을 입력하세요."> <!--name은 서버에서 참조 위함-->
+    </div>
+    <button class="start-button" type="submit" disabled>바로 시작하기</button>
+</form>

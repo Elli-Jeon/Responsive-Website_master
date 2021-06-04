@@ -177,6 +177,10 @@
     margin-bottom: 1rem;
 }
 
+.main-content form {
+    width : 100%;
+}
+
 .name-box .name-button {
     width : 10%;
     height : 100%;
@@ -186,10 +190,11 @@
     background-color: #e9ecef;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    margin : 0;
 }
 
 .name-box input {
-    width : 100%;
+    width : 90%;
     height : 100%;
     padding : 0.5rem 1rem;
     font-size : 28px;

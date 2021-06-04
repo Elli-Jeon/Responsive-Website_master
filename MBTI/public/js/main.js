@@ -1,4 +1,4 @@
-document.querySelectorAll('button', 'a').forEach((btn)=>{
+document.querySelectorAll('a').forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         e.preventDefault();
     });
@@ -24,12 +24,6 @@ dropdownButton.addEventListener('blur',()=>{
 
 const nameInput = document.querySelector(".name-input");
 const startButton = document.querySelector(".start-button");
-
-const checkNameInput = ()=>{
-    console.log(nameInput.textContent);
-}
-
-checkNameInput();
 
 nameInput.addEventListener('change',()=>{
     startButton.removeAttribute('disabled');
