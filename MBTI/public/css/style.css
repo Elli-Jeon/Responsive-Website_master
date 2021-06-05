@@ -242,6 +242,7 @@
     position: relative;
     border-radius: 1rem;
     background-color: #e9ecef;
+    margin : 1rem;
 }
 
 .progress-bar .inside-bar {
@@ -258,7 +259,8 @@
 
 .question-container {
     font-size : 1.8rem;
-    margin: 1rem 0;
+    margin: 1rem;
+    min-height : 5rem;
 }
 
 .empty-line {
@@ -268,14 +270,32 @@
     margin-bottom: 1rem;
 }
 
-.answer-container ol {
-    display: flex;
-    flex-direction: column;
+.user-name {
+    display: none;
+    font-size : 1rem;
+    margin : 1rem;
 }
 
-.answer-container ol li{
-    font-size : 2rem;
-    display: block;
+.answer-container {
+    width : 80%;
+    margin : 1rem;
+}
+
+.answer-container .answer-button {
+    margin : 0.5rem;
+    background-color: var(--primary-color);
+    transition: background-color 250ms;
+}
+
+.answer-container .type-result {
+    font-size : 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.answer-container .desc-result {
+    line-height: 1.7rem;
 }
 
 /* END. Main-content : question*/

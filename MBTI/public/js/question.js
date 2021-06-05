@@ -42,7 +42,7 @@ fetch("../data/data.json")
 const getData = async () => {
     let response = await fetch("../data/data.json");
     let data = await response.json();
-    console.log(data);
+    //console.log(data);
     
     let answer = {
         E : 0,
@@ -56,7 +56,6 @@ const getData = async () => {
     };
     let idxNum = 0; 
     
-
     makeQuestion(data, idxNum, answer);
 }
 /* END. Fetch api*/
@@ -97,16 +96,13 @@ const checkResult = (data, idxNum, answer) => {
     let progressCount = document.querySelector(".progress-count");
     progressCount.textContent = `${idxNum} / 80`;
 
-    let progressBar = document.querySelector(".progress-bar");
     let insideBar = document.querySelector(".inside-bar");
     insideBar.style.width = `${idxNum*1.25}%`;
 
-    
     // Show result
     let questionContainer = document.querySelector(".question-container");
     let answerContainer = document.querySelector(".answer-container");
 
-      
     if(idxNum == 79){
         progressCount.textContent = "80 / 80";
         insideBar.style.width = '100%';
@@ -122,6 +118,7 @@ const showType = (data, answer, answerContainer) => {
     let resultDesc = ""
     let resultTypeContainer = document.createElement("div");
     let resultDescContainer = document.createElement("div");
+    let userName = document.querySelector(".user-name");
 
     if(answer.I > answer.E){
         resultType += "I"
@@ -150,8 +147,11 @@ const showType = (data, answer, answerContainer) => {
         }
     }
     resultTypeContainer.textContent = resultType;
+    resultTypeContainer.className = "type-result";
     resultDescContainer.textContent = resultDesc;
-
+    resultDescContainer.className = "desc-result";
+    
+    userName.style.display = "block";
     answerContainer.appendChild(resultTypeContainer);
     answerContainer.appendChild(resultDescContainer);
 }
