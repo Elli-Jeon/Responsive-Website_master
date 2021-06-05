@@ -244,14 +244,11 @@
     background-color: #e9ecef;
 }
 
-.progress-bar::after {
-    content: "";
-    position: absolute;
+.progress-bar .inside-bar {
     background-color: black;
-    width : 30%;
+    width : 10px;
     height: 1.5rem;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
+    border-radius: 1rem;
 }
 
 .progress-count {
